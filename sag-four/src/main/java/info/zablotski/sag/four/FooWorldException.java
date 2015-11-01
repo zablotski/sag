@@ -1,4 +1,4 @@
-package info.zablotski;
+package info.zablotski.sag.four;
 
 import javax.servlet.ServletException;
 

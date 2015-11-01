@@ -8,7 +8,7 @@
 
     <servlet>
         <servlet-name>HelloServlet</servlet-name>
-        <servlet-class>info.zablotski.HelloServlet</servlet-class>
+        <servlet-class>info.zablotski.sag.four.HelloServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
@@ -18,7 +18,7 @@
     <filter>
 
         <filter-name>HelloFilter</filter-name>
-        <filter-class>info.zablotski.HelloFilter</filter-class>
+        <filter-class>info.zablotski.sag.four.HelloFilter</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>HelloFilter</filter-name>
