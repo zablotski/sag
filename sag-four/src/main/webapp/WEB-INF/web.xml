@@ -15,5 +15,13 @@
         <servlet-name>HelloServlet</servlet-name>
         <url-pattern>/hello.world</url-pattern>
     </servlet-mapping>
+    <filter>
 
+        <filter-name>HelloFilter</filter-name>
+        <filter-class>info.zablotski.HelloFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>HelloFilter</filter-name>
+        <url-pattern>/foo.world</url-pattern>
+    </filter-mapping>
 </web-app>
