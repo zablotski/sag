@@ -9,6 +9,8 @@ import java.io.PrintWriter;
 public class HelloServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         PrintWriter writer = response.getWriter();
-        writer.print("Hello World!");
+        String abc = request.getParameter("abc");
+        writer.print("Hello World! \n");
+        writer.print("Parameter: " + abc);
     }
 }
