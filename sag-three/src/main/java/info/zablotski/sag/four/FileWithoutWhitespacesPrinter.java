@@ -1,4 +1,4 @@
-package info.zablotski;
+package info.zablotski.sag.four;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
