@@ -1,4 +1,4 @@
-package info.zablotski.sag.five.model;
+package info.zablotski.sag.six.model;
 
 public class Names {
 
