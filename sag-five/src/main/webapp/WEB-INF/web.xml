@@ -10,7 +10,7 @@
 
     <servlet>
         <servlet-name>FormServlet</servlet-name>
-        <servlet-class>info.zablotski.sag.five.servlet.FormServlet</servlet-class>
+        <servlet-class>info.zablotski.sag.six.servlet.FormServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>

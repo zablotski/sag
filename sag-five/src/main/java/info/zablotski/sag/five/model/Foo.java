@@ -1,4 +1,4 @@
-package info.zablotski.sag.six.model;
+package info.zablotski.sag.five.model;
 
 import java.lang.annotation.*;
 
