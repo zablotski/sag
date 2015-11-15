@@ -1,5 +1,8 @@
 package info.zablotski.sag.eight.service;
 
+import info.zablotski.sag.eight.dao.impl.UserJDBCTemplate;
+import info.zablotski.sag.eight.model.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -8,27 +11,17 @@ import java.util.Map;
 @Service("userService")
 public class UserService {
 
-    static HashMap<String, String> users = new HashMap<String, String>();
-    {
-        users.put("user1", "password1");
-        users.put("user2", "password2");
-        users.put("user3", "password3");
-        users.put("user4", "password4");
-        users.put("user5", "password5");
-        users.put("user6", "password6");
-        users.put("user7", "password7");
-        users.put("user8", "password8");
-        users.put("user9", "password9");
-    }
+    @Autowired
+    UserJDBCTemplate userJDBCTemplate;
 
     public Map<String, Object> getUserByUsername(String username) {
+        Object o = userJDBCTemplate;
 
-        if (users.get(username) != null){
-
-            //logic here to get your user from the database
+        User user = userJDBCTemplate.getUserByUsername(username);
+        if (user != null){
             Map<String, Object> userMap = new HashMap<String, Object>();
-            userMap.put("username", username);
-            userMap.put("password", users.get(username));
+            userMap.put("username", user.getUsername());
+            userMap.put("password", user.getPassword());
             userMap.put("role", "admin" );
             return userMap;
         }

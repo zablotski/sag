@@ -5,13 +5,16 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 
-public class UserModel implements UserDetails{
+public class User implements UserDetails{
 
     private String username;
     private String password;
+    private int id;
 
+    public User(){}
 
-    public UserModel(String userName, String password){
+    public User(int id, String userName, String password){
+        this.id = id;
         this.username = userName;
         this.password = password;
     }
@@ -50,6 +53,14 @@ public class UserModel implements UserDetails{
 
     @Override
     public String toString() {
-        return "UserModel{" + "userName=" + username + ", password=" + password + '}';
+        return "User{" + "userName=" + username + ", password=" + password + '}';
+    }
+
+    public int getUserId() {
+        return id;
+    }
+
+    public void setId(int userId) {
+        this.id = userId;
     }
 }
