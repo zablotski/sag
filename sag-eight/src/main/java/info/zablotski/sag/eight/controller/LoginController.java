@@ -24,8 +24,6 @@ public class LoginController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public ModelAndView formOutput(ModelAndView modelView, @RequestParam("userName") String userName, @RequestParam("password") String password){
 
-        udsi = new UserDetailsServiceImpl();
-
         try{
             UserDetails repoUser = udsi.loadUserByUsername(userName);
             if (repoUser.getPassword().equals(password)){

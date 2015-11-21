@@ -23,7 +23,7 @@ public class UserService {
             userMap.put("username", user.getUsername());
             userMap.put("password", user.getPassword());
             userMap.put("role", "admin" );
-            return userMap;
+             return userMap;
         }
         return null;
     }

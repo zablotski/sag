@@ -38,11 +38,7 @@ public class UserJDBCTemplate implements UserDAO {
     public User getUserByUsername(String username) {
         jdbcTemplateObject = new JdbcTemplate(dataSource);
 
-        String SQL = "select * from user";
-        List <User> Users = jdbcTemplateObject.query(SQL,
-                new UserMapper());
-
-        SQL = "select * from user where username = '?'";
+        String SQL = "select * from user where username = ?";
         User User = jdbcTemplateObject.queryForObject(SQL,  new Object[]{username}, new UserMapper());
         return User;
     }
